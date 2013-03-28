@@ -5,6 +5,8 @@
     <original-package android:name="com.android.packageinstaller" />
 
     <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
     <uses-permission android:name="android.permission.DELETE_PACKAGES" />
     <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
@@ -13,7 +15,7 @@
             android:allowBackup="false"
             android:theme="@android:style/Theme.Holo.DialogWhenLarge.NoActionBar">
         <activity android:name=".PackageInstallerActivity"
-                android:configChanges="orientation|keyboardHidden"
+                android:configChanges="orientation|screenSize|keyboardHidden"
                 android:excludeFromRecents="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -31,10 +33,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".InstallAppProgress"
-                android:configChanges="orientation|keyboardHidden">
+                android:configChanges="orientation|screenSize|keyboardHidden">
         </activity>
         <activity android:name=".UninstallerActivity"
-                android:configChanges="orientation|keyboardHidden"
+                android:configChanges="orientation|screenSize|keyboardHidden"
                 android:excludeFromRecents="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -45,7 +47,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".UninstallAppProgress"
-                android:configChanges="orientation|keyboardHidden">
+                android:configChanges="orientation|screenSize|keyboardHidden">
         </activity>
         <!--
         <receiver android:name=".RemoveReceiver">
